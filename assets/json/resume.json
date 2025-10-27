@@ -1,9 +1,9 @@
 {
   "basics": {
-    "name": "Albert Einstein",
+    "name": "Martin Špetlík",
     "label": "Scientist",
     "image": "",
-    "email": "albert@einstein.de",
+    "email": "spetlik.martin@seznam.cz",
     "phone": "(912) 123-4567",
     "url": "https://alshedivat.github.io/al-folio/",
     "summary": "A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time",
@@ -151,13 +151,18 @@
   ],
   "languages": [
     {
-      "language": "German",
+      "language": "Czech",
       "fluency": "Native speaker",
       "icon": ""
     },
     {
       "language": "English",
-      "fluency": "Fluent",
+      "fluency": "Full professional proficiency",
+      "icon": ""
+    },
+    {
+      "language": "German",
+      "fluency": "Professional working proficiency",
       "icon": ""
     }
   ],
