@@ -1,9 +1,8 @@
 ---
 layout: page
-title: project 3 with very long name
+title: Generative AI for 3D CT scans of palvic bones
 description: a project that redirects to another website
-img: assets/img/7.jpg
-redirect: https://unsplash.com
+#img: assets/img/7.jpg
 importance: 3
 category: work
 ---

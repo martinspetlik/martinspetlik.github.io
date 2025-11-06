@@ -7,7 +7,7 @@ github_repos:
   - GeoMop/MLMC
   - martinspetlik/MLMC-DFM
   - martinspetlik/OsteoDiffusion
-  - GeoMop/HLAVO
+  - GeoMop/HLAVO/tree/MS_Kalman_measurements_2
   - martinspetlik/MLMC_graph_metamodel
   - martinspetlik/NeuroOpt
-
+  

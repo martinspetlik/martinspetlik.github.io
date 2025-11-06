@@ -18,20 +18,20 @@ This course introduces the fundamental principles of computer systems, focusing 
 - Logical operations and Boolean algebra  
 - Simplification of logical functions  
 - Combinational and sequential logic circuits  
-- Finite automata and state machines  
-- Processor organization and instruction sets  
+- Finite state machines  
+- Processor and instruction sets  
 - CISC and RISC processor architectures  
 - Von Neumann and Harvard architectures  
 - Memory elements, registers, and cache memory  
 - Computer buses and communication types  
-- Basic principles of neural network operation  
+- Basic principles of neural networks
 
 ---
 
 ## Theory of Graphs
 **Seminars**
 
-This course introduces the mathematical foundations and algorithms related to graphs and networks, emphasizing practical problem-solving.
+This course introduces the mathematical foundations and algorithms related to graphs, emphasizing practical problem-solving.
 
 **Topics covered:**
 - Concepts and definitions of graphs  
@@ -43,7 +43,7 @@ This course introduces the mathematical foundations and algorithms related to gr
 - Shortest path algorithms  
 - The Chinese Postman Problem  
 - Network flows 
-- Graph coloring 
+- Graph coloring
 
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image and giscus comments
-img: assets/img/3.jpg
+title: MLMC-DFM
+description: Multilevel Monte Carlo method for discrete-fracture matrix models. Includes deep-learning based surrogate of numerical homogenization of hydraulic conductivity tensor.
+#img: assets/img/3.jpg
 importance: 2
 category: work
 giscus_comments: true

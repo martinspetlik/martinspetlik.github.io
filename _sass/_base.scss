@@ -276,6 +276,7 @@ ul.task-list input[type="checkbox"] {
   }
 }
 
+
 .navbar.navbar-light {
   a {
     &:hover {
@@ -1423,3 +1424,11 @@ figure.cover {
     color: #23212d !important;
   }
 }
+
+/* Center the navbar menu */
+.navbar-nav {
+  margin: 0 auto;   /* centers the group */
+  float: none;      /* remove right float */
+  text-align: center;
+}
+
