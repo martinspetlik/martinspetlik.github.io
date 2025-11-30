@@ -9,7 +9,7 @@ category: work
 related_publications: false
 ---
 
-[Code Repository](https://github.com/GeoMop/MLMC)
+[Code repository](https://github.com/GeoMop/MLMC)
 
 Monte Carlo methods ([Giles, 2015](https://people.maths.ox.ac.uk/gilesm/files/acta15.pdf)) are statistical techniques used to estimate expectations arising from stochastic models. They are widely applied across computational finance, uncertainty quantification, physical process modeling, environmental engineering, and other fields.
 

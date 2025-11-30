@@ -7,7 +7,7 @@ importance: 3
 category: work
 ---
 
-[Paper](https://www.mdpi.com/2076-3417/12/15/7382) &#124; [Code Repository](https://github.com/martinspetlik/MLMC-graph-metamodel)
+[Paper](https://www.mdpi.com/2076-3417/12/15/7382) &#124; [Code repository](https://github.com/martinspetlik/MLMC-graph-metamodel)
 
 
 

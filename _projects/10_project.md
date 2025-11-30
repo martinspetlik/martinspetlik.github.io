@@ -7,7 +7,7 @@ importance: 1
 category: work
 ---
 
-[Paper](https://martinspetlik.github.io/assets/pdf/convolutional_surrogate_3D_dfm_tensor_upscaling_preprint.pdf) &#124; [Code Repository](https://github.com/martinspetlik/MLMC-DFM/)
+[Paper](https://martinspetlik.github.io/assets/pdf/convolutional_surrogate_3D_dfm_tensor_upscaling_preprint.pdf) &#124; [Code repository](https://github.com/martinspetlik/MLMC-DFM/)
 
 
 ### Summary

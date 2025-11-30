@@ -7,7 +7,7 @@ importance: 2
 category: work
 ---
 
-[Code Repository](https://github.com/martinspetlik/OsteoDiffusion/)
+[Code repository](https://github.com/martinspetlik/OsteoDiffusion/)
 
 ### Objective
 Osteoporotic fractures are life-altering events that can potentially lead to death. Currently, one in three women over the age of 50 experience such fractures. Developing new treatments requires a thorough understanding of bone adaptation and dysfunction.
