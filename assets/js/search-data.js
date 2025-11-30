@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-repositories",
+  },{id: "nav-projects",
+          title: "Projects",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/projects/";
+          },
+        },{id: "nav-repositories",
           title: "Repositories",
           description: "",
           section: "Navigation",
@@ -60,9 +67,14 @@ ninja.data = [{
             },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
-          section: "News",},{id: "projects-mlmc",
-          title: 'MLMC',
-          description: "Python framework for Multilevel Monte Carlo methods",
+          section: "News",},{id: "projects-convolutional-surrogate-for-3d-discrete-fracture-matrix-tensor-upscaling",
+          title: 'Convolutional Surrogate for 3D Discrete Fracture-Matrix Tensor Upscaling',
+          description: "",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_project.html";
+            },},{id: "projects-mlmc-python-package",
+          title: 'MLMC Python Package',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project.html";
             },},{id: "projects-mlmc-dfm",
@@ -70,9 +82,9 @@ ninja.data = [{
           description: "Multilevel Monte Carlo method for discrete-fracture matrix models. Includes deep-learning based surrogate of numerical homogenization of hydraulic conductivity tensor.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_project.html";
-            },},{id: "projects-generative-ai-for-3d-ct-scans-of-palvic-bones",
-          title: 'Generative AI for 3D CT scans of palvic bones',
-          description: "a project that redirects to another website",
+            },},{id: "projects-generative-ai-for-3d-ct-scans-of-pelvic-bones",
+          title: 'Generative AI for 3D CT Scans of Pelvic Bones',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_project.html";
             },},{id: "projects-kalman-filtering",
@@ -80,9 +92,9 @@ ninja.data = [{
           description: "another without an image",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_project.html";
-            },},{id: "projects-surrogates-of-groundwater-processes-for-multilevel-monte-carlo-methods",
-          title: 'Surrogates of Groundwater processes for multilevel Monte Carlo methods',
-          description: "a project with a background image",
+            },},{id: "projects-graph-surrogate-for-mlmc-based-groundwater-contaminant-transport-uq",
+          title: 'Graph Surrogate for MLMC-Based Groundwater Contaminant Transport UQ',
+          description: "",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_project.html";
             },},{id: "projects-project-6",
