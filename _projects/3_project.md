@@ -1,80 +1,88 @@
 ---
 layout: page
-title: Generative AI for 3D CT scans of palvic bones
-description: a project that redirects to another website
+title: Generative AI for 3D CT Scans of Pelvic Bones
+description: 
 #img: assets/img/7.jpg
-importance: 3
+importance: 2
 category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+[Code Repository](https://github.com/martinspetlik/OsteoDiffusion/)
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+### Objective
+Osteoporotic fractures are life-altering events that can potentially lead to death. Currently, one in three women over the age of 50 experience such fractures. Developing new treatments requires a thorough understanding of bone adaptation and dysfunction.
+Our goal is to elucidate how population variation in bone morphology, a poorly understood area, relates to bone remodeling, a crucial process for optimal bone function. We hypothesize that external mechanical forces influence bone morphology and mineral density variations, which can be detected through clinical CT scans.
+We aim to identify patients' physiological loading states from CT scans. This innovative approach could revolutionize osteoporosis treatment by providing crucial information for early and precise individualized treatment and enhancing modern in-silico drug prediction models.
+However, the **insufficient number of CT data limits** the validation of the hypothesis and the model. To address this, we augment dataset using **generative machine-learning models**, specifically a vector quantized GANs and denoissing diffusion models.
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+
+### Dataset
+* **Dataset Size and Demographics:** The study utilizes **371 abdominal CT scans** of patients, ranging in age from **16 to 91 years**. Exclusions include patients with bone trauma, large osteophytes, or fractures.
+* **Scan Voxel Size:** The voxel size of the scans varied, falling in the range from $0.5\times0.5\times0.6\ \mathrm{mm}^3$ to $0.85\times0.85\times1\ \mathrm{mm}^3$.
+* **Bones of Interest:** The analysis focuses on the **bones from the pelvic complex**, as they are highly susceptible to the effects of aging and the risks associated with osteoporosis.
+* **Preprocessing and Representation:**
+    * Each of the 371 samples is preprocessed to be represented by the same number of voxels: (320, 192, 320)
+    * At each voxel a scalar value of mineral density is prescribed
+
+---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/project_gen_bones/orig_sample.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
+    An example of original CT scan sample
 </div>
+
+
+---
+
+### Generative AI Architecture
+
+Standard 3D diffusion models are computationally infeasible for volumes of this size. Inspired by recent work in 3D latent diffusion, including:
+
+- *Kim et al., 2024*:  
+  **Adaptive Latent Diffusion Model for 3D Medical Image-to-Image Translation**  
+  https://openaccess.thecvf.com/content/WACV2024/papers/Kim_Adaptive_Latent_Diffusion_Model_for_3D_Medical_Image_to_Image_WACV_2024_paper.pdf
+
+- *Scientific Reports, 2023*:  
+  **VQ-GAN-based Latent Diffusion for 3D Medical Imaging**  
+  https://www.nature.com/articles/s41598-023-34341-2
+
+I designed a **two-stage generative pipeline** as follows.
+
+## 1. VQ-GAN for latent representation
+A 3D VQ-GAN is trained to compress CT volumes into a compact latent representation (**40 × 24 × 40**), mitigating the blurriness typically observed in VAEs. The encoder output is discretized using a **learned codebook**, which improves reconstruction fidelity and facilitates latent-space modeling.
+
+## 2. Latent diffusion model
+A denoising diffusion probabilistic model (DDPM) operates on the quantized latent space:
+- Significantly reduces computational and memory requirements  
+- Improves training stability, especially with limited datasets
+
+## 3. Reconstruction to voxel space
+The generated latents are decoded by the VQ-GAN decoder to produce full-resolution volumes (**320 × 192 × 320**), yielding anatomically realistic CT reconstructions.
+
+Memory constraints were additionally mitigated through mixed-precision training and gradient accumulation.
+
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/projects/project_gen_bones/sample_25.png" title="example image" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Example of a generated CT scan sample
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
+---
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Current Limitations and Next Steps
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+The primary limitation is the **restricted dataset size**. Ongoing and future work includes:
+ 
+- Quantitative evaluation using SSIM, LPIPS-3D, and morphological plausibility metrics 
+- Expert validation by biomedical imaging specialists  
 
-{% raw %}
 
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
+A detailed methodological description and full results will be published in an upcoming manuscript.
 
-{% endraw %}

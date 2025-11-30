@@ -3,8 +3,8 @@ layout: page
 title: MLMC-DFM
 description: Multilevel Monte Carlo method for discrete-fracture matrix models. Includes deep-learning based surrogate of numerical homogenization of hydraulic conductivity tensor.
 #img: assets/img/3.jpg
-importance: 2
-category: work
+importance: 5
+category: fun
 giscus_comments: true
 ---
 
