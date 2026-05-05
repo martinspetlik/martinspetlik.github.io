@@ -21,19 +21,25 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a Ph.D. candidate in **Applied Sciences in Engineering** at the **Technical University of Liberec**, working at the intersection of **statistical methods, machine learning, and subsurface hydrogeology**. 
+I am an applied machine learning researcher and software engineer with a PhD in Applied Sciences in Engineering from the Technical University of Liberec. My work focuses on **deep learning, uncertainty quantification, high-performance computing (HPC), and scientific simulation**.
 
-In my dissertation, I focus on **Multilevel Monte Carlo (MLMC) methods for 3D discrete fracture–matrix (DFM) models** to enable efficient simulation of groundwater processes in heterogeneous fractured media. The application of MLMC to DFM models is, in itself, a novel contribution that advances **uncertainty quantification** for fractured porous media. Furthermore, I have developed a **convolutional neural network–based surrogate model** for the numerical homogenization of hydraulic conductivity tensors, which significantly reduces the computational cost of MLMC and makes multiscale simulations computationally feasible. I have also conducted research on **graph neural networks (GNNs)** as surrogate models for groundwater processes. Most of my work runs on large-scale **high-performance computing (HPC)** systems.
+My doctoral research addressed the computational challenges of large-scale uncertainty quantification in complex physical models. I developed **3D CNN-based surrogate models** to replace expensive numerical homogenisation in discrete fracture–matrix (DFM) simulations, achieving confirmed **100× GPU speedups** and reducing Multilevel Monte Carlo (MLMC) computational cost by over 90% compared to standard Monte Carlo methods. To the best of my knowledge, this represents the first application of MLMC to 3D DFM models. I also explored **graph neural networks (GNNs)** as surrogate models for groundwater processes in earlier stages of this work.
 
-I am the **lead developer of the open-source [mlmc package](https://pypi.org/project/mlmc/)**, which provides a general and efficient framework for implementing the multilevel Monte Carlo method in Python.
+In parallel, I worked on **generative models for 3D medical imaging**, designing VQ-GAN and diffusion-based approaches to synthesise realistic pelvic bone CT scans under low-sample, high-dimensional conditions and real clinical constraints.
 
-Beyond my core Ph.D. research, I develop **generative AI models** (VQ-VAE, VQGAN, and diffusion models) to create realistic 3D pelvic bones CT scans for medical research. I also work on **data assimilation for the Richards equation** using the **Unscented Kalman Filter (UKF)** with both laboratory and field soil-moisture measurements to improve predictive capabilities in unsaturated flow modeling.
+I am the **lead developer of [mlmc](https://pypi.org/project/mlmc/)**, an open-source Python package for Multilevel Monte Carlo simulations, supporting parallel execution on HPC clusters (PBS), efficient sample scheduling, and HDF5-based data management.
 
+I have also worked on **data assimilation for the Richards equation** using the **Unscented Kalman Filter (UKF)**, integrating laboratory and field soil-moisture measurements with meteorological data to improve predictive modeling of unsaturated flow.
 
-**My broader research interests include:**
+Most of my work is carried out on large-scale HPC systems.
+
+## Research Interests
+
 - Scientific Machine Learning (SciML)
-- Multilevel Monte Carlo methods & Uncertainty Quantification
-- Generative AI for Medical Applications
-- Geometric Deep Learning (in particular Graph Neural Networks)
+- Generative Models for 3D Volumetric Data
+- Multilevel Monte Carlo & Uncertainty Quantification
+- High-Performance Computing for Machine Learning
+- Geometric Deep Learning (Graph Neural Networks)
 - Data Assimilation & Kalman Filtering
+
 
