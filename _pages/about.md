@@ -25,7 +25,7 @@ I am an applied machine learning researcher and software engineer with a PhD in 
 
 My doctoral research addressed the computational challenges of large-scale uncertainty quantification in complex physical models. I developed **3D CNN-based surrogate models** to replace expensive numerical homogenisation in discrete fracture–matrix (DFM) simulations, achieving confirmed **100× GPU speedups** and reducing Multilevel Monte Carlo (MLMC) computational cost by over 90% compared to standard Monte Carlo methods. To the best of my knowledge, this represents the first application of MLMC to 3D DFM models. I also explored **graph neural networks (GNNs)** as surrogate models for groundwater processes in earlier stages of this work.
 
-In parallel, I worked on **generative models for 3D medical imaging**, designing VQ-GAN and diffusion-based approaches to synthesise realistic pelvic bone CT scans under low-sample, high-dimensional conditions and real clinical constraints.
+In parallel, I worked on **generative models for 3D medical imaging**, designing VQ-GAN and diffusion-based approaches to synthesise realistic pelvic bone CT scans under low-sample, high-dimensional conditions.
 
 I am the **lead developer of [mlmc](https://pypi.org/project/mlmc/)**, an open-source Python package for Multilevel Monte Carlo simulations, supporting parallel execution on HPC clusters (PBS), efficient sample scheduling, and HDF5-based data management.
 

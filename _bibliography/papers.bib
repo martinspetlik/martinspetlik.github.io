@@ -1,3 +1,20 @@
+@article{SpetlikPhD2026,
+title = {Multilevel Monte Carlo Method for Models on Mixed Meshes},
+journal = {PhD Thesis, Technical University of Liberec},
+volume = {209},
+month = {4},
+year = {2026},
+issn = {0098-3004},
+author = {Martin Špetlík},
+keywords = {Deep learning surrogate, 3D DFM models, Numerical homogenization, Equivalent hydraulic conductivity, 3D convolutional neural network},
+abstract = {Modeling groundwater processes in fractured crystalline rock is essential for the safety assessment of deep geological repositories of radioactive waste. Discrete fracture–matrix (DFM) models allow for explicit representation of fracture networks and the surrounding rock matrix, but their computational cost limits their applicability in uncertainty quantification workflows that require large numbers of model evaluations.
+This dissertation proposes a multiscale computational framework that integrates the multilevel Monte Carlo (MLMC) method, numerical homogenization, and deep learning–based surrogate modeling to enable efficient statistical estimation. MLMC is employed to reduce computational cost relative to the standard Monte Carlo method, while homogenization is used to upscale the hydraulic conductivity effects of sub-resolution fractures. To overcome the computational bottleneck associated with repeated homogenization, a deep learning surrogate is developed to directly predict equivalent hydraulic conductivity tensors from voxelized three-dimensional representations of fracture and matrix hydraulic conductivities. The surrogates are trained on datasets generated from DFM simulations and systematically evaluated over a broad range of fracture network configurations, fracture–matrix conductivity contrasts, and matrix parameters.
+The results demonstrate strong predictive accuracy, with NRMSE < 0.22 in most test scenarios, and substantial computational gains exceeding a factor of 100 when inference is performed on a GPU.
+The practical performance of surrogate-based upscaling is demonstrated in two macroscale groundwater flow applications, where the surrogate approach preserves the accuracy of quantities of interest compared to conventional numerical homogenization. Finally, MLMC estimators incorporating surrogate-based homogenization are compared with standard Monte Carlo estimators, yielding computational cost reductions exceeding 90\% while maintaining reliable statistical accuracy.},
+selected={true},
+pdf={dissertation.pdf}
+}
+
 @inproceedings{Spetlik2021104,
 author={Špetlík,Martin and Březina,Jan},
 editor={ },
@@ -27,7 +44,7 @@ estimates.},
 pdf={groundwater_flow_metamodel_for_multilevel_monte_carlo_methods.pdf}
 } 
 
-@Article{Spetlik2022,
+@article{Spetlik2022,
 AUTHOR = {Špetlík, Martin and Březina, Jan},
 TITLE = {Groundwater Contaminant Transport Solved by Monte Carlo Methods Accelerated by Deep Learning Meta-Model},
 JOURNAL = {Applied Sciences},
@@ -39,9 +56,9 @@ ARTICLE-NUMBER = {7382},
 URL = {https://www.mdpi.com/2076-3417/12/15/7382},
 ISSN = {2076-3417},
 ABSTRACT = {Groundwater contaminant transport modeling is a vitally important topic. Since modeled processes include uncertainties, Monte Carlo methods are adopted to obtain some statistics. However, accurate models have a substantial computational cost. This drawback can be overcome by employing the multilevel Monte Carlo method (MLMC) or approximating the original model using a meta-model. We combined both of these approaches. A stochastic model is substituted with a deep learning meta-model that consists of a graph convolutional neural network and a feed-forward neural network. This meta-model can approximate models solved on unstructured meshes. The meta-model within the standard Monte Carlo method can bring significant computational cost savings. Nevertheless, the meta-model must be highly accurate to obtain similar errors as when using the original model. Proposed MLMC with the new lowest-accurate level of meta-models can reduce total computational costs, and the accuracy of the meta-model does not have to be so high. The size of the computational cost savings depends on the cost distribution across MLMC levels. Our approach is especially efficacious when the dominant computational cost is on the lowest-accuracy MLMC level. Depending on the number of estimated moments, we can reduce computational costs by up to ca. 25% while maintaining the accuracy of estimates.},
-DOI = {10.3390/app12157382}
+DOI = {10.3390/app12157382},
+pdf={groundwater_contaminant_transport_mlmc.pdf}
 }
-
 
 @article{Spetlik2025,
 title = {Convolutional surrogate for 3D discrete fracture–matrix tensor upscaling},
