@@ -36,7 +36,7 @@ Most of my work is carried out on large-scale HPC systems.
 ## Research Interests
 
 - Scientific Machine Learning (SciML)
-- Generative Models for 3D Volumetric Data
+- Generative Models for high-resolution 3D Data
 - Multilevel Monte Carlo & Uncertainty Quantification
 - High-Performance Computing for Machine Learning
 - Geometric Deep Learning (Graph Neural Networks)
